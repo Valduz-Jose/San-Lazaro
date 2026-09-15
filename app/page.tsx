@@ -25,12 +25,12 @@ export default async function Home() {
 
   return (
     <>
-      <section className="border-b border-slate-200 bg-gradient-to-b from-emerald-50 to-white">
+      <section className="border-b border-slate-200 bg-gradient-to-b from-brand-50 to-white">
         <div className="mx-auto max-w-6xl px-4 py-20 text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+          <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">
             {FUNDACION.nombre}
           </p>
-          <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-bold tracking-tight text-navy sm:text-5xl">
             {FUNDACION.lema}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
@@ -40,7 +40,7 @@ export default async function Home() {
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               href="/adopciones"
-              className="rounded-md bg-emerald-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-700"
+              className="rounded-md bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
             >
               Conoce a nuestros rescatados
             </Link>
@@ -59,7 +59,7 @@ export default async function Home() {
                 className="rounded-xl border border-slate-200 bg-white px-4 py-5"
               >
                 <dt className="sr-only">{metrica.etiqueta}</dt>
-                <dd className="text-3xl font-bold text-emerald-700">{metrica.valor}</dd>
+                <dd className="text-3xl font-bold text-brand-700">{metrica.valor}</dd>
                 <dd className="mt-1 text-xs text-slate-600">{metrica.etiqueta}</dd>
               </div>
             ))}
@@ -79,7 +79,7 @@ export default async function Home() {
         accion={
           <Link
             href="/adopciones"
-            className="text-sm font-medium text-emerald-700 hover:underline"
+            className="text-sm font-medium text-brand-700 hover:underline"
           >
             Ver todos →
           </Link>
@@ -103,7 +103,7 @@ export default async function Home() {
         titulo="Galería"
         descripcion="Rescates, jornadas de vacunación y finales felices."
         accion={
-          <Link href="/galeria" className="text-sm font-medium text-emerald-700 hover:underline">
+          <Link href="/galeria" className="text-sm font-medium text-brand-700 hover:underline">
             Ver galería completa →
           </Link>
         }

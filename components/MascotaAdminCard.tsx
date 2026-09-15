@@ -116,14 +116,14 @@ export function MascotaAdminCard({ mascota }: { mascota: Mascota }) {
 
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="font-semibold text-slate-900">{mascota.nombre}</h3>
+            <h3 className="font-semibold text-navy">{mascota.nombre}</h3>
             <Badge className={COLOR_ESTADO[mascota.estado]}>
               {ETIQUETAS_ESTADO[mascota.estado]}
             </Badge>
           </div>
 
           <p className="mt-1 text-sm text-slate-600">{resumen.join(" · ")}</p>
-          <p className="mt-0.5 text-xs text-slate-500">
+          <p className="mt-0.5 text-xs text-teal-700">
             {salud} · Rescate: {formatearFecha(mascota.fecha_rescate)}
           </p>
 
@@ -133,7 +133,7 @@ export function MascotaAdminCard({ mascota }: { mascota: Mascota }) {
 
           <Link
             href={`/adopciones/${mascota.id}`}
-            className="mt-2 inline-block text-xs font-medium text-emerald-700 hover:underline"
+            className="mt-2 inline-block text-xs font-medium text-brand-700 hover:underline"
           >
             Ver ficha pública →
           </Link>
@@ -154,7 +154,7 @@ export function MascotaAdminCard({ mascota }: { mascota: Mascota }) {
             <button
               type="button"
               onClick={() => setPanel((actual) => (actual === "adoptar" ? null : "adoptar"))}
-              className="rounded-md bg-emerald-600 px-2.5 py-1 text-xs font-semibold text-white hover:bg-emerald-700"
+              className="rounded-md bg-brand-600 px-2.5 py-1 text-xs font-semibold text-white hover:bg-brand-700"
             >
               {panel === "adoptar" ? "Cerrar" : "Marcar como adoptado"}
             </button>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { cerrarSesion } from "@/app/login/actions";
+import { Logo } from "@/components/Logo";
 import { NAVEGACION_ADMIN } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -21,18 +22,16 @@ export function AdminNav({ email }: { email: string | null }) {
   const esActiva = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <div className="border-b border-slate-800 bg-slate-900">
+    <div className="border-b border-brand-800 bg-brand-900">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2.5">
         <Link
           href="/admin"
           className={cn(
             "flex shrink-0 items-center gap-2 rounded-md px-1 py-1 text-sm font-bold transition-colors",
-            pathname === "/admin" ? "text-white" : "text-slate-300 hover:text-white",
+            pathname === "/admin" ? "text-white" : "text-brand-100 hover:text-white",
           )}
         >
-          <span className="grid size-6 place-items-center rounded bg-emerald-600 text-[11px] font-bold text-white">
-            SL
-          </span>
+          <Logo px={26} />
           Panel
         </Link>
 
@@ -57,8 +56,8 @@ export function AdminNav({ email }: { email: string | null }) {
                   className={cn(
                     "shrink-0 whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
                     activa
-                      ? "bg-white text-slate-900"
-                      : "text-slate-400 hover:bg-slate-800 hover:text-white",
+                      ? "bg-white text-brand-900"
+                      : "text-brand-200 hover:bg-brand-800 hover:text-white",
                   )}
                 >
                   {item.etiqueta}
@@ -72,7 +71,7 @@ export function AdminNav({ email }: { email: string | null }) {
           {email && (
             <span
               title={email}
-              className="hidden max-w-[22ch] truncate text-xs text-slate-400 sm:inline"
+              className="hidden max-w-[22ch] truncate text-xs text-brand-200 sm:inline"
             >
               {email}
             </span>
@@ -81,7 +80,7 @@ export function AdminNav({ email }: { email: string | null }) {
           <form action={cerrarSesion}>
             <button
               type="submit"
-              className="rounded-md border border-slate-700 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:border-slate-600 hover:bg-slate-800 hover:text-white"
+              className="rounded-md border border-brand-700 px-3 py-1.5 text-xs font-medium text-brand-100 transition-colors hover:border-brand-400 hover:bg-brand-800 hover:text-white"
             >
               Cerrar sesión
             </button>

@@ -28,13 +28,13 @@ export function MascotaAdopcionForm({
   );
 
   return (
-    <form action={accion} className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+    <form action={accion} className="rounded-xl border border-brand-200 bg-brand-50 p-4">
       <input type="hidden" name="id" value={mascota.id} />
 
-      <p className="text-sm font-semibold text-emerald-900">
+      <p className="text-sm font-semibold text-brand-900">
         Marcar a {mascota.nombre} como adoptado
       </p>
-      <p className="mt-1 text-xs text-emerald-800">
+      <p className="mt-1 text-xs text-brand-800">
         Sube la foto con la nueva familia. Se guarda en{" "}
         <code>mascotas/familias</code> y aparece en la ficha pública.
       </p>
@@ -48,7 +48,7 @@ export function MascotaAdopcionForm({
           required
           className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 file:mr-3 file:rounded file:border-0 file:bg-slate-100 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-slate-700"
         />
-        <span className="mt-1 block text-xs text-slate-500">Obligatoria. Máximo 8 MB.</span>
+        <span className="mt-1 block text-xs text-teal-700">Obligatoria. Máximo 8 MB.</span>
       </label>
 
       {estado && (
@@ -68,7 +68,7 @@ export function MascotaAdopcionForm({
         <button
           type="submit"
           disabled={pendiente}
-          className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60"
+          className="rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {pendiente ? "Guardando…" : "Confirmar adopción"}
         </button>

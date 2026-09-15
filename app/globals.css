@@ -4,6 +4,35 @@
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
+/*
+ * Paleta de marca, tomada del logo del refugio.
+ *
+ * `brand-*` es la escala del azul de la huella (brand-500 es el tono exacto
+ * del logo). `navy` es el azul del texto «REFUGIO»; `teal`, el gris azulado
+ * del subtítulo.
+ *
+ * `teal` puro solo llega a 3.3:1 sobre blanco, así que sirve para íconos y
+ * texto grande, no para texto pequeño. Para eso está `teal-700` (5.7:1, AA).
+ * Nota: `teal-700` pisa el tono homónimo de Tailwind; el proyecto no usa la
+ * escala `teal` que trae Tailwind por defecto, solo estos dos tonos.
+ */
+@theme {
+  --color-brand-50: #ebf0f9;
+  --color-brand-100: #d1def1;
+  --color-brand-200: #a9c0e5;
+  --color-brand-300: #80a3d9;
+  --color-brand-400: #497bc8;
+  --color-brand-500: #0247b3;
+  --color-brand-600: #033d98;
+  --color-brand-700: #05337d;
+  --color-brand-800: #062963;
+  --color-brand-900: #08204b;
+
+  --color-navy: #1c4c91;
+  --color-teal: #6f929e;
+  --color-teal-700: #4a6b76;
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -37,8 +37,8 @@ export function MascotaCard({ mascota }: { mascota: Mascota }) {
       </div>
 
       <div className="flex flex-1 flex-col p-4">
-        <h3 className="text-lg font-semibold text-slate-900">{mascota.nombre}</h3>
-        <p className="mt-0.5 text-sm text-slate-500">
+        <h3 className="text-lg font-semibold text-navy">{mascota.nombre}</h3>
+        <p className="mt-0.5 text-sm text-teal-700">
           {ETIQUETAS_ESPECIE[mascota.especie]} · {ETIQUETAS_SEXO[mascota.sexo]} ·{" "}
           {formatearEdad(mascota.edad_meses)}
         </p>
@@ -52,7 +52,7 @@ export function MascotaCard({ mascota }: { mascota: Mascota }) {
           {mascota.esterilizado && <Badge>Esterilizado</Badge>}
         </div>
 
-        <span className="mt-4 text-sm font-medium text-emerald-700 group-hover:underline">
+        <span className="mt-4 text-sm font-medium text-brand-700 group-hover:underline">
           Ver ficha →
         </span>
       </div>

@@ -50,7 +50,7 @@ export default async function MascotaPage({ params }: PageProps<"/adopciones/[id
     <article className="mx-auto max-w-5xl px-4 py-12">
       <Link
         href="/adopciones"
-        className="text-sm font-medium text-slate-500 hover:text-slate-900"
+        className="text-sm font-medium text-teal-700 hover:text-slate-900"
       >
         ← Volver a adopciones
       </Link>
@@ -73,7 +73,7 @@ export default async function MascotaPage({ params }: PageProps<"/adopciones/[id
 
         <div>
           <div className="flex flex-wrap items-center gap-3">
-            <h1 className="text-3xl font-bold tracking-tight text-slate-900">
+            <h1 className="text-3xl font-bold tracking-tight text-navy">
               {mascota.nombre}
             </h1>
             <Badge className={COLOR_ESTADO[mascota.estado]}>
@@ -88,7 +88,7 @@ export default async function MascotaPage({ params }: PageProps<"/adopciones/[id
           <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 rounded-xl border border-slate-200 bg-slate-50 p-5 text-sm">
             {fichaTecnica.map((dato) => (
               <div key={dato.etiqueta}>
-                <dt className="text-slate-500">{dato.etiqueta}</dt>
+                <dt className="text-teal-700">{dato.etiqueta}</dt>
                 <dd className="font-medium text-slate-900">{dato.valor}</dd>
               </div>
             ))}
@@ -97,7 +97,7 @@ export default async function MascotaPage({ params }: PageProps<"/adopciones/[id
           {mascota.estado === "en_adopcion" ? (
             <a
               href={`mailto:${FUNDACION.email}?subject=${encodeURIComponent(`Quiero adoptar a ${mascota.nombre}`)}`}
-              className="mt-6 inline-block rounded-md bg-emerald-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-700"
+              className="mt-6 inline-block rounded-md bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
             >
               Quiero adoptar a {mascota.nombre}
             </a>
@@ -111,7 +111,7 @@ export default async function MascotaPage({ params }: PageProps<"/adopciones/[id
 
       {mascota.estado === "adoptado" && mascota.imagen_familia_url && (
         <section className="mt-12 border-t border-slate-200 pt-8">
-          <h2 className="text-xl font-bold text-slate-900">En su nuevo hogar</h2>
+          <h2 className="text-xl font-bold text-navy">En su nuevo hogar</h2>
           <div className="relative mt-3 aspect-[16/9] overflow-hidden rounded-xl bg-slate-100">
             <Image
               src={mascota.imagen_familia_url}
@@ -126,7 +126,7 @@ export default async function MascotaPage({ params }: PageProps<"/adopciones/[id
 
       {mascota.historia && (
         <section className="mt-12 border-t border-slate-200 pt-8">
-          <h2 className="text-xl font-bold text-slate-900">Su historia</h2>
+          <h2 className="text-xl font-bold text-navy">Su historia</h2>
           <p className="mt-3 whitespace-pre-line text-slate-600">{mascota.historia}</p>
         </section>
       )}

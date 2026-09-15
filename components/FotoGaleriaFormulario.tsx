@@ -7,7 +7,7 @@ import { actualizarFoto, crearFoto } from "@/app/admin/galeria/actions";
 import type { FotoGaleria, ResultadoFormulario } from "@/types";
 
 const CLASE_CAMPO =
-  "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500";
+  "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500";
 
 const CLASE_ARCHIVO =
   "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 file:mr-3 file:rounded file:border-0 file:bg-slate-100 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-slate-700";
@@ -108,10 +108,10 @@ export function FotoGaleriaFormulario({
           type="checkbox"
           name="destacada"
           defaultChecked={destacada}
-          className="size-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
+          className="size-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
         />
         <span className="font-medium text-slate-700">
-          Destacada <span className="text-slate-500">(aparece primero en la galería)</span>
+          Destacada <span className="text-teal-700">(aparece primero en la galería)</span>
         </span>
       </label>
 
@@ -140,7 +140,7 @@ export function FotoGaleriaFormulario({
               aria-label="Imagen"
               className={CLASE_ARCHIVO}
             />
-            <span className="mt-1 block text-xs text-slate-500">
+            <span className="mt-1 block text-xs text-teal-700">
               {esEdicion
                 ? "Déjalo vacío para conservar la imagen actual. Si subes otra, la anterior se borra."
                 : "Obligatoria."}{" "}
@@ -175,7 +175,7 @@ export function FotoGaleriaFormulario({
         <button
           type="submit"
           disabled={pendiente}
-          className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60"
+          className="rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {pendiente ? "Guardando…" : esEdicion ? "Guardar cambios" : "Agregar foto"}
         </button>

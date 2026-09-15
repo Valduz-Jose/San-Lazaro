@@ -30,26 +30,26 @@ export default async function AdminAliadosPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="text-2xl font-bold tracking-tight text-slate-900">
+      <h1 className="text-2xl font-bold tracking-tight text-navy">
         Aliados de la fundación
       </h1>
       <p className="mt-1 text-sm text-slate-600">
         {aliados.length} aliado{aliados.length === 1 ? "" : "s"} en total: {activos} activo
         {activos === 1 ? "" : "s"} y {inactivos} inactivo{inactivos === 1 ? "" : "s"}. Solo los
         activos aparecen en{" "}
-        <Link href="/aliados" className="font-medium text-emerald-700 hover:underline">
+        <Link href="/aliados" className="font-medium text-brand-700 hover:underline">
           la página pública
         </Link>
         .
       </p>
 
       <section className="mt-8">
-        <h2 className="mb-3 text-lg font-semibold text-slate-900">Nuevo aliado</h2>
+        <h2 className="mb-3 text-lg font-semibold text-navy">Nuevo aliado</h2>
         <AliadoFormulario />
       </section>
 
       <section className="mt-10">
-        <h2 className="mb-3 text-lg font-semibold text-slate-900">Todos los aliados</h2>
+        <h2 className="mb-3 text-lg font-semibold text-navy">Todos los aliados</h2>
 
         {aliados.length > 0 ? (
           <div className="space-y-4">

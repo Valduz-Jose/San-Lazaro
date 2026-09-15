@@ -32,7 +32,7 @@ export function FotoGaleriaAdminCard({ foto }: { foto: FotoGaleria }) {
 
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="font-semibold text-slate-900">{foto.titulo}</h3>
+            <h3 className="font-semibold text-navy">{foto.titulo}</h3>
             {foto.destacada && (
               <Badge className="bg-amber-100 text-amber-800 ring-amber-600/20">Destacada</Badge>
             )}
@@ -43,7 +43,7 @@ export function FotoGaleriaAdminCard({ foto }: { foto: FotoGaleria }) {
             <p className="mt-1 line-clamp-2 text-sm text-slate-600">{foto.descripcion}</p>
           )}
 
-          <p className="mt-1 text-xs text-slate-500">
+          <p className="mt-1 text-xs text-teal-700">
             Subida el {formatearFecha(foto.created_at)}
           </p>
         </div>

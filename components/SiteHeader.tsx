@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+import { Logo } from "@/components/Logo";
 import { FUNDACION, NAVEGACION } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -22,12 +23,10 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-2" onClick={() => setAbierto(false)}>
-          <span className="grid size-9 place-items-center rounded-full bg-emerald-600 text-lg text-white">
-            🐾
-          </span>
+          <Logo px={40} prioritaria />
           <span className="leading-tight">
-            <span className="block text-sm font-bold text-slate-900">San Lázaro</span>
-            <span className="block text-[11px] text-slate-500">{FUNDACION.lema}</span>
+            <span className="block text-sm font-bold text-navy">San Lázaro</span>
+            <span className="block text-[11px] text-teal-700">{FUNDACION.lema}</span>
           </span>
         </Link>
 
@@ -39,7 +38,7 @@ export function SiteHeader() {
               className={cn(
                 "rounded-md px-3 py-2 text-sm font-medium transition-colors",
                 esActiva(item.href)
-                  ? "bg-emerald-50 text-emerald-700"
+                  ? "bg-brand-50 text-brand-700"
                   : "text-slate-600 hover:bg-slate-100 hover:text-slate-900",
               )}
             >
@@ -69,7 +68,7 @@ export function SiteHeader() {
               className={cn(
                 "block rounded-md px-3 py-2 text-sm font-medium",
                 esActiva(item.href)
-                  ? "bg-emerald-50 text-emerald-700"
+                  ? "bg-brand-50 text-brand-700"
                   : "text-slate-600 hover:bg-slate-100",
               )}
             >

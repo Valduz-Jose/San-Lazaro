@@ -25,7 +25,7 @@ export function AliadoCard({ aliado }: { aliado: Aliado }) {
 
       <div className="min-w-0">
         <div className="flex flex-wrap items-center gap-2">
-          <h3 className="font-semibold text-slate-900">{aliado.nombre}</h3>
+          <h3 className="font-semibold text-navy">{aliado.nombre}</h3>
           <Badge>{ETIQUETAS_TIPO_ALIADO[aliado.tipo]}</Badge>
         </div>
 
@@ -38,7 +38,7 @@ export function AliadoCard({ aliado }: { aliado: Aliado }) {
             href={aliado.sitio_web}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-block break-all text-sm font-medium text-emerald-700 hover:underline"
+            className="mt-2 inline-block break-all text-sm font-medium text-brand-700 hover:underline"
           >
             {aliado.sitio_web.replace(/^https?:\/\//, "")}
           </a>

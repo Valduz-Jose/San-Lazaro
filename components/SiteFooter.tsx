@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 import { IconoInstagram, IconoWhatsApp } from "@/components/icons";
+import { Logo } from "@/components/Logo";
 import { FUNDACION, NAVEGACION } from "@/lib/constants";
 
 /**
@@ -29,15 +30,15 @@ function FilaContacto({
         {...(externo ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         className="group flex items-center gap-3"
       >
-        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-white text-slate-500 ring-1 ring-slate-200 transition-colors group-hover:bg-emerald-600 group-hover:text-white group-hover:ring-emerald-600">
+        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-white text-teal-700 ring-1 ring-slate-200 transition-colors group-hover:bg-brand-600 group-hover:text-white group-hover:ring-brand-600">
           {icono}
         </span>
 
         <span className="min-w-0">
-          <span className="block break-all text-sm font-medium text-slate-700 transition-colors group-hover:text-emerald-700">
+          <span className="block break-all text-sm font-medium text-slate-700 transition-colors group-hover:text-brand-700">
             {etiqueta}
           </span>
-          <span className="block text-xs text-slate-500">{detalle}</span>
+          <span className="block text-xs text-teal-700">{detalle}</span>
         </span>
       </a>
     </li>
@@ -50,10 +51,8 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-3 sm:gap-8 lg:gap-14">
         <div>
           <div className="flex items-center gap-2">
-            <span className="grid size-8 place-items-center rounded-full bg-emerald-600 text-base text-white">
-              🐾
-            </span>
-            <h2 className="text-sm font-bold text-slate-900">{FUNDACION.nombre}</h2>
+            <Logo px={36} />
+            <h2 className="text-sm font-bold text-navy">{FUNDACION.nombre}</h2>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-slate-600">
             {FUNDACION.descripcion}
@@ -61,13 +60,13 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h2 className="text-sm font-bold text-slate-900">Secciones</h2>
+          <h2 className="text-sm font-bold text-navy">Secciones</h2>
           <ul className="mt-3 space-y-1.5">
             {NAVEGACION.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm text-slate-600 transition-colors hover:text-emerald-700"
+                  className="text-sm text-slate-600 transition-colors hover:text-brand-700"
                 >
                   {item.etiqueta}
                 </Link>
@@ -77,7 +76,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h2 className="text-sm font-bold text-slate-900">Contacto</h2>
+          <h2 className="text-sm font-bold text-navy">Contacto</h2>
           <ul className="mt-3 space-y-3">
             <FilaContacto
               href={FUNDACION.whatsapp}
@@ -105,7 +104,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-slate-200 px-4 py-4 text-center text-xs text-slate-500">
+      <div className="border-t border-slate-200 px-4 py-4 text-center text-xs text-teal-700">
         © {new Date().getFullYear()} {FUNDACION.nombre}. Todos los derechos reservados.
       </div>
     </footer>

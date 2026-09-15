@@ -35,25 +35,25 @@ export default async function AdminMascotasPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="text-2xl font-bold tracking-tight text-slate-900">
+      <h1 className="text-2xl font-bold tracking-tight text-navy">
         Mascotas del refugio
       </h1>
       <p className="mt-1 text-sm text-slate-600">
         {mascotas.length} ficha{mascotas.length === 1 ? "" : "s"} en total: {enAdopcion} en
         adopción y {adoptados} adoptada{adoptados === 1 ? "" : "s"}. Todas aparecen en{" "}
-        <Link href="/adopciones" className="font-medium text-emerald-700 hover:underline">
+        <Link href="/adopciones" className="font-medium text-brand-700 hover:underline">
           adopciones
         </Link>
         .
       </p>
 
       <section className="mt-8">
-        <h2 className="mb-3 text-lg font-semibold text-slate-900">Nueva mascota</h2>
+        <h2 className="mb-3 text-lg font-semibold text-navy">Nueva mascota</h2>
         <MascotaFormulario />
       </section>
 
       <section className="mt-10">
-        <h2 className="mb-3 text-lg font-semibold text-slate-900">Todas las mascotas</h2>
+        <h2 className="mb-3 text-lg font-semibold text-navy">Todas las mascotas</h2>
 
         {mascotas.length > 0 ? (
           <div className="space-y-4">

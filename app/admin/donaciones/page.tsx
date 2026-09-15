@@ -28,7 +28,7 @@ export default async function AdminDonacionesPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="text-2xl font-bold tracking-tight text-slate-900">
+      <h1 className="text-2xl font-bold tracking-tight text-navy">
         Registrar donaciones
       </h1>
       <p className="mt-1 text-sm text-slate-600">
@@ -38,19 +38,19 @@ export default async function AdminDonacionesPage() {
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.3fr]">
         <div>
-          <h2 className="mb-3 text-lg font-semibold text-slate-900">Nueva donación</h2>
+          <h2 className="mb-3 text-lg font-semibold text-navy">Nueva donación</h2>
           <RegistrarDonacionForm metas={metas} />
         </div>
 
         <div>
-          <h2 className="mb-3 text-lg font-semibold text-slate-900">
+          <h2 className="mb-3 text-lg font-semibold text-navy">
             Últimas donaciones registradas
           </h2>
 
           {donaciones.length > 0 ? (
             <div className="overflow-x-auto rounded-xl border border-slate-200">
               <table className="w-full min-w-[620px] text-left text-sm">
-                <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+                <thead className="bg-slate-50 text-xs uppercase tracking-wide text-teal-700">
                   <tr>
                     <th className="px-4 py-3 font-medium">Foto</th>
                     <th className="px-4 py-3 font-medium">Donante</th>
@@ -86,7 +86,7 @@ export default async function AdminDonacionesPage() {
                         <td className="px-4 py-3 text-slate-600">
                           {formatearCantidad(donacion.cantidad)} {donacion.meta.unidad}
                         </td>
-                        <td className="px-4 py-3 text-slate-500">
+                        <td className="px-4 py-3 text-teal-700">
                           {formatearFecha(donacion.created_at)}
                         </td>
                         <td className="px-4 py-3">

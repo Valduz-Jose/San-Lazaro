@@ -26,25 +26,25 @@ export default async function AdminGaleriaPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="text-2xl font-bold tracking-tight text-slate-900">
+      <h1 className="text-2xl font-bold tracking-tight text-navy">
         Galería de la fundación
       </h1>
       <p className="mt-1 text-sm text-slate-600">
         {fotos.length} foto{fotos.length === 1 ? "" : "s"} en total, {destacadas} destacada
         {destacadas === 1 ? "" : "s"}. Las destacadas encabezan{" "}
-        <Link href="/galeria" className="font-medium text-emerald-700 hover:underline">
+        <Link href="/galeria" className="font-medium text-brand-700 hover:underline">
           la galería pública
         </Link>
         .
       </p>
 
       <section className="mt-8">
-        <h2 className="mb-3 text-lg font-semibold text-slate-900">Nueva foto</h2>
+        <h2 className="mb-3 text-lg font-semibold text-navy">Nueva foto</h2>
         <FotoGaleriaFormulario />
       </section>
 
       <section className="mt-10">
-        <h2 className="mb-3 text-lg font-semibold text-slate-900">Todas las fotos</h2>
+        <h2 className="mb-3 text-lg font-semibold text-navy">Todas las fotos</h2>
 
         {fotos.length > 0 ? (
           <div className="space-y-4">

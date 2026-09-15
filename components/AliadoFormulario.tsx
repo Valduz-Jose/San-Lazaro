@@ -8,7 +8,7 @@ import { ETIQUETAS_TIPO_ALIADO } from "@/lib/constants";
 import type { Aliado, ResultadoFormulario } from "@/types";
 
 const CLASE_CAMPO =
-  "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500";
+  "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500";
 
 const CLASE_ARCHIVO =
   "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 file:mr-3 file:rounded file:border-0 file:bg-slate-100 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-slate-700";
@@ -118,7 +118,7 @@ export function AliadoFormulario({
           placeholder="clinicasanjose.com"
           className={CLASE_CAMPO}
         />
-        <span className="mt-1 block text-xs text-slate-500">
+        <span className="mt-1 block text-xs text-teal-700">
           Opcional. Si no pones <code>https://</code> lo agregamos nosotros.
         </span>
       </label>
@@ -148,7 +148,7 @@ export function AliadoFormulario({
               aria-label="Logo"
               className={CLASE_ARCHIVO}
             />
-            <span className="mt-1 block text-xs text-slate-500">
+            <span className="mt-1 block text-xs text-teal-700">
               {esEdicion
                 ? "Déjalo vacío para conservar el logo actual. Si subes otro, el anterior se borra."
                 : "Obligatorio."}{" "}
@@ -167,7 +167,7 @@ export function AliadoFormulario({
       </div>
 
       {!esEdicion && (
-        <p className="text-xs text-slate-500">
+        <p className="text-xs text-teal-700">
           El aliado se crea activo, así que aparecerá en <code>/aliados</code> enseguida.
         </p>
       )}
@@ -189,7 +189,7 @@ export function AliadoFormulario({
         <button
           type="submit"
           disabled={pendiente}
-          className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60"
+          className="rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {pendiente ? "Guardando…" : esEdicion ? "Guardar cambios" : "Crear aliado"}
         </button>

@@ -12,7 +12,7 @@ import {
 import type { Mascota, ResultadoFormulario } from "@/types";
 
 const CLASE_CAMPO =
-  "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500";
+  "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500";
 
 const CLASE_ARCHIVO =
   "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 file:mr-3 file:rounded file:border-0 file:bg-slate-100 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-slate-700";
@@ -212,7 +212,7 @@ export function MascotaFormulario({
                 type="checkbox"
                 name="vacunado"
                 defaultChecked={marcado("vacunado", mascota?.vacunado ?? false)}
-                className="size-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
+                className="size-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
               />
               <span className="text-slate-700">Vacunado</span>
             </label>
@@ -222,7 +222,7 @@ export function MascotaFormulario({
                 type="checkbox"
                 name="esterilizado"
                 defaultChecked={marcado("esterilizado", mascota?.esterilizado ?? false)}
-                className="size-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
+                className="size-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
               />
               <span className="text-slate-700">Esterilizado</span>
             </label>
@@ -257,7 +257,7 @@ export function MascotaFormulario({
               aria-label="Foto principal"
               className={CLASE_ARCHIVO}
             />
-            <span className="mt-1 block text-xs text-slate-500">
+            <span className="mt-1 block text-xs text-teal-700">
               {esEdicion
                 ? "Déjalo vacío para conservar la foto actual. Si subes otra, la anterior se borra."
                 : "Obligatoria."}{" "}
@@ -276,7 +276,7 @@ export function MascotaFormulario({
       </div>
 
       {!esEdicion && (
-        <p className="text-xs text-slate-500">
+        <p className="text-xs text-teal-700">
           La ficha se crea siempre en estado «En adopción».
         </p>
       )}
@@ -298,7 +298,7 @@ export function MascotaFormulario({
         <button
           type="submit"
           disabled={pendiente}
-          className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60"
+          className="rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {pendiente ? "Guardando…" : esEdicion ? "Guardar cambios" : "Crear ficha"}
         </button>

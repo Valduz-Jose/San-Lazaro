@@ -18,7 +18,7 @@ export function Section({
     <section className="mx-auto w-full max-w-6xl px-4 py-12">
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900">{titulo}</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-navy">{titulo}</h2>
           {descripcion && <p className="mt-1 max-w-2xl text-slate-600">{descripcion}</p>}
         </div>
         {accion}

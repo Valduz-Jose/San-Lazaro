@@ -13,7 +13,7 @@ import { metaCumplida } from "@/lib/utils";
 import type { EstadoMeta, Meta } from "@/types";
 
 const COLOR_ESTADO_META: Record<EstadoMeta, string> = {
-  activa: "bg-emerald-100 text-emerald-800 ring-emerald-600/20",
+  activa: "bg-brand-100 text-brand-800 ring-brand-600/20",
   cumplida: "bg-sky-100 text-sky-800 ring-sky-600/20",
   archivada: "bg-slate-200 text-slate-700 ring-slate-500/20",
 };
@@ -34,7 +34,7 @@ function SelectEstado({ estado }: { estado: EstadoMeta }) {
       disabled={pending}
       onChange={(evento) => evento.currentTarget.form?.requestSubmit()}
       aria-label="Estado de la meta"
-      className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-700 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 disabled:opacity-60"
+      className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-700 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 disabled:opacity-60"
     >
       {Object.entries(ETIQUETAS_ESTADO_META).map(([valor, texto]) => (
         <option key={valor} value={valor}>
@@ -54,13 +54,13 @@ export function MetaAdminCard({ meta }: { meta: Meta }) {
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="font-semibold text-slate-900">{meta.titulo}</h3>
+            <h3 className="font-semibold text-navy">{meta.titulo}</h3>
             <Badge className={COLOR_ESTADO_META[meta.estado]}>
               {ETIQUETAS_ESTADO_META[meta.estado]}
             </Badge>
             {meta.categoria && <Badge>{ETIQUETAS_CATEGORIA_META[meta.categoria]}</Badge>}
             {cumplida && meta.estado !== "cumplida" && (
-              <Badge className="bg-emerald-100 text-emerald-800 ring-emerald-600/20">
+              <Badge className="bg-brand-100 text-brand-800 ring-brand-600/20">
                 Objetivo alcanzado
               </Badge>
             )}

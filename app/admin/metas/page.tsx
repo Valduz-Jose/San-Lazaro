@@ -35,26 +35,26 @@ export default async function AdminMetasPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="text-2xl font-bold tracking-tight text-slate-900">
+      <h1 className="text-2xl font-bold tracking-tight text-navy">
         Necesidades del refugio
       </h1>
       <p className="mt-1 text-sm text-slate-600">
         {metas.length} meta{metas.length === 1 ? "" : "s"} en total, {activas} activa
         {activas === 1 ? "" : "s"}. Solo las activas aparecen en la web pública y en el
         desplegable de{" "}
-        <Link href="/admin/donaciones" className="font-medium text-emerald-700 hover:underline">
+        <Link href="/admin/donaciones" className="font-medium text-brand-700 hover:underline">
           registrar donaciones
         </Link>
         .
       </p>
 
       <section className="mt-8">
-        <h2 className="mb-3 text-lg font-semibold text-slate-900">Nueva meta</h2>
+        <h2 className="mb-3 text-lg font-semibold text-navy">Nueva meta</h2>
         <MetaFormulario />
       </section>
 
       <section className="mt-10">
-        <h2 className="mb-3 text-lg font-semibold text-slate-900">Todas las metas</h2>
+        <h2 className="mb-3 text-lg font-semibold text-navy">Todas las metas</h2>
 
         {metas.length > 0 ? (
           <div className="space-y-4">

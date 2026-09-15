@@ -91,6 +91,6 @@ export const ETIQUETAS_ESTADO_META: Record<EstadoMeta, string> = {
 
 /** Clases de color por estado de adopción, para las insignias. */
 export const COLOR_ESTADO: Record<EstadoAdopcion, string> = {
-  en_adopcion: "bg-emerald-100 text-emerald-800 ring-emerald-600/20",
+  en_adopcion: "bg-brand-100 text-brand-800 ring-brand-600/20",
   adoptado: "bg-slate-200 text-slate-700 ring-slate-500/20",
 };

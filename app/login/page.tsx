@@ -23,7 +23,7 @@ export default async function LoginPage({ searchParams }: PageProps<"/login">) {
 
   return (
     <div className="mx-auto w-full max-w-md px-4 py-20">
-      <h1 className="text-2xl font-bold tracking-tight text-slate-900">Ingresar</h1>
+      <h1 className="text-2xl font-bold tracking-tight text-navy">Ingresar</h1>
       <p className="mt-1 text-sm text-slate-600">
         Área privada del equipo de la fundación. Los usuarios se crean desde Supabase Auth.
       </p>

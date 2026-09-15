@@ -38,9 +38,9 @@ export default async function DonacionesPage() {
         />
       )}
 
-      <div className="mt-10 rounded-xl border border-emerald-200 bg-emerald-50 p-6">
-        <h2 className="text-lg font-semibold text-emerald-900">¿Quieres aportar?</h2>
-        <p className="mt-1 text-sm text-emerald-800">
+      <div className="mt-10 rounded-xl border border-brand-200 bg-brand-50 p-6">
+        <h2 className="text-lg font-semibold text-brand-900">¿Quieres aportar?</h2>
+        <p className="mt-1 text-sm text-brand-800">
           Escríbenos a{" "}
           <a href={`mailto:${FUNDACION.email}`} className="font-medium underline">
             {FUNDACION.email}

@@ -26,7 +26,7 @@ function BotonActivo({ activo }: { activo: boolean }) {
       className={
         activo
           ? "rounded-md border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-amber-700 disabled:opacity-60"
-          : "rounded-md bg-emerald-600 px-2.5 py-1 text-xs font-semibold text-white hover:bg-emerald-700 disabled:opacity-60"
+          : "rounded-md bg-brand-600 px-2.5 py-1 text-xs font-semibold text-white hover:bg-brand-700 disabled:opacity-60"
       }
     >
       {pending ? "Guardando…" : activo ? "Desactivar" : "Activar"}
@@ -58,12 +58,12 @@ export function AliadoAdminCard({ aliado }: { aliado: Aliado }) {
 
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <h3 className="font-semibold text-slate-900">{aliado.nombre}</h3>
+            <h3 className="font-semibold text-navy">{aliado.nombre}</h3>
             <Badge>{ETIQUETAS_TIPO_ALIADO[aliado.tipo]}</Badge>
             <Badge
               className={
                 aliado.activo
-                  ? "bg-emerald-100 text-emerald-800 ring-emerald-600/20"
+                  ? "bg-brand-100 text-brand-800 ring-brand-600/20"
                   : "bg-slate-200 text-slate-700 ring-slate-500/20"
               }
             >
@@ -80,7 +80,7 @@ export function AliadoAdminCard({ aliado }: { aliado: Aliado }) {
               href={aliado.sitio_web}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-1 inline-block break-all text-xs font-medium text-emerald-700 hover:underline"
+              className="mt-1 inline-block break-all text-xs font-medium text-brand-700 hover:underline"
             >
               {aliado.sitio_web.replace(/^https?:\/\//, "")}
             </a>

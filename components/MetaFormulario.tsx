@@ -7,7 +7,7 @@ import { ETIQUETAS_CATEGORIA_META } from "@/lib/constants";
 import type { Meta, ResultadoFormulario } from "@/types";
 
 const CLASE_CAMPO =
-  "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500";
+  "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500";
 
 /**
  * Alta y edición de metas comparten campos y firma de server action, así que
@@ -129,7 +129,7 @@ export function MetaFormulario({
       </div>
 
       {!esEdicion && (
-        <p className="text-xs text-slate-500">
+        <p className="text-xs text-teal-700">
           Lo reunido arranca en 0 y solo lo mueven las donaciones registradas.
         </p>
       )}
@@ -151,7 +151,7 @@ export function MetaFormulario({
         <button
           type="submit"
           disabled={pendiente}
-          className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60"
+          className="rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {pendiente ? "Guardando…" : esEdicion ? "Guardar cambios" : "Crear meta"}
         </button>

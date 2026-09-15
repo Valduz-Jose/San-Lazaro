@@ -34,7 +34,7 @@ export default async function AdminPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="text-2xl font-bold tracking-tight text-slate-900">Panel</h1>
+      <h1 className="text-2xl font-bold tracking-tight text-navy">Panel</h1>
       <p className="mt-1 text-sm text-slate-600">
         Resumen del refugio. Usa las pestañas de arriba para gestionar cada módulo.
       </p>
@@ -45,19 +45,19 @@ export default async function AdminPage() {
             key={metrica.etiqueta}
             className="rounded-xl border border-slate-200 bg-white px-4 py-5"
           >
-            <dt className="text-xs text-slate-500">{metrica.etiqueta}</dt>
+            <dt className="text-xs text-teal-700">{metrica.etiqueta}</dt>
             <dd className="mt-1 text-3xl font-bold text-slate-900">{metrica.valor}</dd>
           </div>
         ))}
       </dl>
 
       <section className="mt-10">
-        <h2 className="text-lg font-semibold text-slate-900">Registro de mascotas</h2>
+        <h2 className="text-lg font-semibold text-navy">Registro de mascotas</h2>
 
         {mascotas.length > 0 ? (
           <div className="mt-3 overflow-x-auto rounded-xl border border-slate-200">
             <table className="w-full min-w-[640px] text-left text-sm">
-              <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+              <thead className="bg-slate-50 text-xs uppercase tracking-wide text-teal-700">
                 <tr>
                   <th className="px-4 py-3 font-medium">Nombre</th>
                   <th className="px-4 py-3 font-medium">Especie</th>
@@ -86,7 +86,7 @@ export default async function AdminPage() {
                     <td className="px-4 py-3">
                       <Link
                         href={`/adopciones/${mascota.id}`}
-                        className="font-medium text-emerald-700 hover:underline"
+                        className="font-medium text-brand-700 hover:underline"
                       >
                         Ver
                       </Link>

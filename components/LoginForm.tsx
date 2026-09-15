@@ -6,7 +6,7 @@ import { iniciarSesion } from "@/app/login/actions";
 import type { ResultadoFormulario } from "@/types";
 
 const CLASE_CAMPO =
-  "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500";
+  "mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500";
 
 export function LoginForm({ destino }: { destino: string }) {
   const [estado, accion, pendiente] = useActionState<ResultadoFormulario, FormData>(
@@ -43,7 +43,7 @@ export function LoginForm({ destino }: { destino: string }) {
       <button
         type="submit"
         disabled={pendiente}
-        className="w-full rounded-md bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-md bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {pendiente ? "Entrando…" : "Iniciar sesión"}
       </button>

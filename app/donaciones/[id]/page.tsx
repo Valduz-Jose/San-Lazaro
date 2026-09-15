@@ -36,16 +36,16 @@ export default async function MetaPage({ params }: PageProps<"/donaciones/[id]">
     <div className="mx-auto max-w-4xl px-4 py-12">
       <Link
         href="/donaciones"
-        className="text-sm font-medium text-slate-500 hover:text-slate-900"
+        className="text-sm font-medium text-teal-700 hover:text-slate-900"
       >
         ← Volver a las metas
       </Link>
 
       <header className="mt-6">
         <div className="flex flex-wrap items-center gap-3">
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900">{meta.titulo}</h1>
+          <h1 className="text-3xl font-bold tracking-tight text-navy">{meta.titulo}</h1>
           {cumplida ? (
-            <Badge className="bg-emerald-100 text-emerald-800 ring-emerald-600/20">
+            <Badge className="bg-brand-100 text-brand-800 ring-brand-600/20">
               ¡Meta cumplida!
             </Badge>
           ) : (
@@ -61,9 +61,9 @@ export default async function MetaPage({ params }: PageProps<"/donaciones/[id]">
       </header>
 
       <section className="mt-10">
-        <h2 className="text-xl font-bold text-slate-900">
+        <h2 className="text-xl font-bold text-navy">
           Quiénes han donado{" "}
-          <span className="text-base font-normal text-slate-500">({donaciones.length})</span>
+          <span className="text-base font-normal text-teal-700">({donaciones.length})</span>
         </h2>
 
         {donaciones.length > 0 ? (
@@ -93,10 +93,10 @@ export default async function MetaPage({ params }: PageProps<"/donaciones/[id]">
                       ? "Donación anónima"
                       : (donacion.donante_nombre ?? "Donación anónima")}
                   </p>
-                  <p className="mt-1 text-sm text-emerald-700">
+                  <p className="mt-1 text-sm text-brand-700">
                     Aportó {formatearCantidad(donacion.cantidad)} {meta.unidad}
                   </p>
-                  <p className="mt-1 text-xs text-slate-500">
+                  <p className="mt-1 text-xs text-teal-700">
                     {formatearFecha(donacion.created_at)}
                   </p>
                 </div>
