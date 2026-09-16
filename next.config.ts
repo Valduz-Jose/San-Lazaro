@@ -19,6 +19,12 @@ function hostDeSupabase(): string | null {
 const host = hostDeSupabase();
 
 const nextConfig: NextConfig = {
+  // Las rutas de QR (lib/qr.ts) leen el logo desde disco, y `public/` no entra en el
+  // bundle del servidor si no se pide explícitamente.
+  outputFileTracingIncludes: {
+    "/adopciones/*/qr": ["./public/logo-san-lazaro-transparente.png"],
+    "/admin/mascotas/exportar-qr": ["./public/logo-san-lazaro-transparente.png"],
+  },
   experimental: {
     serverActions: {
       // Las fotos de donaciones se suben a través de una server action.

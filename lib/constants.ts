@@ -8,15 +8,32 @@ import type {
   TipoAliado,
 } from "@/types";
 
+/**
+ * Dominio de producción. Los QR apuntan siempre aquí, también en desarrollo:
+ * un QR impreso con `localhost` no le sirve a nadie.
+ */
+export const SITE_URL = "https://proyectosanlazaro.com";
+
 export const FUNDACION = {
   nombre: "Fundación San Lázaro",
   lema: "Rescatamos, curamos y buscamos un hogar",
   descripcion:
     "Somos una fundación de rescate animal. Atendemos perros y gatos en situación de calle, los recuperamos y los acompañamos hasta que encuentran una familia.",
-  email: "contacto@fundacionsanlazaro.org",
+  email: "contacto@proyectosanlazaro.com",
   telefono: "+58 414-751-9346",
   /** Click-to-chat: el número va sin espacios ni guiones, con código de país. */
   whatsapp: "https://wa.me/584147519346",
+  instagram: "https://www.instagram.com/refugiosanlazaro/",
+  instagramCuenta: "@refugiosanlazaro",
+} as const;
+
+/**
+ * Movimiento Alpha: aliado del refugio, no es un canal de contacto propio.
+ * Va aparte de `FUNDACION` justamente para que no se mezcle con los datos
+ * de contacto del refugio.
+ */
+export const ALIADO_ALPHA = {
+  nombre: "Movimiento Alpha",
   instagram: "https://www.instagram.com/alphauniversidad/",
   instagramCuenta: "@alphauniversidad",
 } as const;

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { CompartirMascota } from "@/components/CompartirMascota";
 import { Badge } from "@/components/ui";
 import {
   COLOR_ESTADO,
@@ -12,6 +13,7 @@ import {
   ETIQUETAS_TAMANO,
   FUNDACION,
 } from "@/lib/constants";
+import { urlFichaMascota } from "@/lib/qr";
 import { obtenerMascota } from "@/lib/queries";
 import { formatearEdad, formatearFecha } from "@/lib/utils";
 
@@ -130,6 +132,25 @@ export default async function MascotaPage({ params }: PageProps<"/adopciones/[id
           <p className="mt-3 whitespace-pre-line text-slate-600">{mascota.historia}</p>
         </section>
       )}
+
+      <section className="mt-12 grid items-center gap-10 border-t border-slate-200 pt-8 md:grid-cols-[auto_1fr]">
+        <figure className="flex flex-col items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element -- PNG generado por un Route Handler, no hace falta optimizarlo */}
+          <img
+            src={`/adopciones/${mascota.id}/qr`}
+            alt={`Código QR de la ficha de ${mascota.nombre}`}
+            width={256}
+            height={256}
+            loading="lazy"
+            className="size-56 rounded-xl border border-slate-200 bg-white p-2 sm:size-60 lg:size-64"
+          />
+          <figcaption className="mt-3 text-sm font-medium text-slate-600">
+            Escanea para volver a esta ficha
+          </figcaption>
+        </figure>
+
+        <CompartirMascota nombre={mascota.nombre} url={urlFichaMascota(mascota.id)} />
+      </section>
     </article>
   );
 }

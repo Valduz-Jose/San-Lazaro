@@ -131,12 +131,24 @@ export function MascotaAdminCard({ mascota }: { mascota: Mascota }) {
             <p className="mt-2 line-clamp-2 text-sm text-slate-600">{mascota.descripcion}</p>
           )}
 
-          <Link
-            href={`/adopciones/${mascota.id}`}
-            className="mt-2 inline-block text-xs font-medium text-brand-700 hover:underline"
-          >
-            Ver ficha pública →
-          </Link>
+          <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+            <Link
+              href={`/adopciones/${mascota.id}`}
+              // Pestaña nueva: el admin no pierde el panel al revisar la ficha.
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-medium text-brand-700 hover:underline"
+            >
+              Ver ficha pública →
+            </Link>
+            <a
+              href={`/adopciones/${mascota.id}/qr?download=1`}
+              download
+              className="text-xs font-medium text-brand-700 hover:underline"
+            >
+              Descargar QR
+            </a>
+          </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-2">

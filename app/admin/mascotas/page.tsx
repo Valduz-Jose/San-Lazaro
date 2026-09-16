@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FileSpreadsheet, QrCode } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -50,6 +51,28 @@ export default async function AdminMascotasPage() {
       <section className="mt-8">
         <h2 className="mb-3 text-lg font-semibold text-navy">Nueva mascota</h2>
         <MascotaFormulario />
+      </section>
+
+      <section className="mt-10">
+        <h2 className="mb-3 text-lg font-semibold text-navy">Exportar</h2>
+        <div className="flex flex-wrap gap-3">
+          <a
+            href="/admin/mascotas/exportar-qr"
+            download
+            className="inline-flex items-center gap-2 rounded-md border border-brand-600 bg-white px-4 py-2 text-sm font-medium text-brand-700 transition-colors hover:bg-brand-50"
+          >
+            <QrCode className="size-4" aria-hidden />
+            Descargar todos los QR (.zip)
+          </a>
+          <a
+            href="/admin/mascotas/exportar-excel"
+            download
+            className="inline-flex items-center gap-2 rounded-md border border-brand-600 bg-white px-4 py-2 text-sm font-medium text-brand-700 transition-colors hover:bg-brand-50"
+          >
+            <FileSpreadsheet className="size-4" aria-hidden />
+            Descargar datos en Excel (.xlsx)
+          </a>
+        </div>
       </section>
 
       <section className="mt-10">

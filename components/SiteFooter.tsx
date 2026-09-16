@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 import { IconoInstagram, IconoWhatsApp } from "@/components/icons";
 import { Logo } from "@/components/Logo";
-import { FUNDACION, NAVEGACION } from "@/lib/constants";
+import { ALIADO_ALPHA, FUNDACION, NAVEGACION } from "@/lib/constants";
 
 /**
  * Fila de contacto: ícono en pastilla + enlace, en vez de texto plano. El
@@ -57,6 +57,25 @@ export function SiteFooter() {
           <p className="mt-3 text-sm leading-relaxed text-slate-600">
             {FUNDACION.descripcion}
           </p>
+
+          {/*
+            Aliado, no contacto: mismo ícono de Instagram pero en tamaño y tono
+            reducidos para que no compita con el bloque de "Contacto".
+          */}
+          <p className="mt-4 text-xs text-slate-500">
+            Aliado:{" "}
+            <a
+              href={ALIADO_ALPHA.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 align-middle transition-colors hover:text-brand-700"
+            >
+              <IconoInstagram className="size-3.5 shrink-0" />
+              <span>
+                {ALIADO_ALPHA.nombre} ({ALIADO_ALPHA.instagramCuenta})
+              </span>
+            </a>
+          </p>
         </div>
 
         <div>
@@ -98,7 +117,7 @@ export function SiteFooter() {
               externo
               icono={<IconoInstagram className="size-4" />}
               etiqueta={FUNDACION.instagramCuenta}
-              detalle="Movimiento Alpha en Instagram"
+              detalle="Síguenos en Instagram"
             />
           </ul>
         </div>
